@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	//fmt.Println("Cards")
 	//var card string = "Spades(ACE)"
@@ -20,6 +22,33 @@ func main() {
 	//OR
 	//cards := newDeck()
 	//cards.print()
+
+	fmt.Println("---------------------Make a Deal-------------------------")
+	a, b := deal(newDeck(), 3)
+	a.print()
+	b.print()
+
+	//conversion string to []byte
+	//fmt.Println([]byte("helloww"))
+
+	//to convert a []string to []byte, first convert []string to string, then we can easily convert it to []byte from string
+	//fmt.Println([]byte(a.toString())) // []byte() will convert a string to []byte
+
+	err := a.saveToFile("deal1.txt")
+	if err != nil {
+		fmt.Println("couldn't save, because of error: ", err)
+	}
+	err = b.saveToFile("deal2.txt")
+	if err != nil {
+		fmt.Println("couldn't save, because of error: ", err)
+	}
+
+	fmt.Println("=======================READ File=============================")
+	readFile("deal1.txt").print()
+
+	fmt.Println("----------")
+	b.shuffle()
+	b.print()
 }
 
 func newCard() string {
