@@ -15,8 +15,8 @@ func main() {
 	//append into slice
 	//cards = append(cards, "lol") //not modifying the original slice, a new copy of cards has been made
 
-	//cards.print() //In OO programming terms - it is only possible beacuse we "cards" is of type deck, and we have a function in type "deck" as "print()"
-	//In Go programming terms- It was possible because we had a reciever(of type deck) on the function print()
+	//cards.print() //In OO programming terms - it is only possible beacuse "cards" is of type deck, and we have a function in type "deck" as "print()"
+	//In Go programming terms- It was possible because we had a reciever(of type deck) on the function print(), so all the deck type variables now have the access to the print() function
 
 	newDeck().print()
 	//OR
@@ -29,10 +29,11 @@ func main() {
 	b.print()
 
 	//conversion string to []byte
-	//fmt.Println([]byte("helloww"))
+	//fmt.Println([]byte("helloww")) // []byte() will convert a string to []byte
 
 	//to convert a []string to []byte, first convert []string to string, then we can easily convert it to []byte from string
-	//fmt.Println([]byte(a.toString())) // []byte() will convert a string to []byte
+	//fmt.Println(a.toString())
+	fmt.Println([]byte(a.toString())) //incl. commas
 
 	err := a.saveToFile("deal1.txt")
 	if err != nil {
@@ -46,11 +47,11 @@ func main() {
 	fmt.Println("=======================READ File=============================")
 	readFile("deal1.txt").print()
 
-	fmt.Println("----------")
+	fmt.Println("-----------------------------------------------------------")
 	b.shuffle()
-	b.print()
+	readFile("deal2.txt").print()
 }
 
-func newCard() string {
-	return "Diamond(Five)"
-}
+//func newCard() string {
+//	return "Diamond(Five)"
+//}

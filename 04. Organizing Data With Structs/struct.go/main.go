@@ -21,14 +21,14 @@ func main() {
 	//aadarsh := person{"aadarsh", "shah", 23} //order must be same
 	//aadarsh := person{firstname: "aadarsh", lastname: "shah", age: 23}
 
-	//var aadarsh person //assignes a zero-value by go compiler (string-> "", int-> 0, float->0, bool->false) corresponding zero-values for some common datatypes
+	var aadarsh person //assignes a zero-value by go compiler (string-> "", int-> 0, float->0, bool->false) corresponding zero-values for some common datatypes
 	//aadarsh.firstname = "atul"
 	//aadarsh.lastname = "shah"
 	//aadarsh.age = 23
 	//aadarsh.contactInfo = contact{email: "aadarshkumar131@gmail.com", currectPlace: "bagdogra"}
 	//fmt.Printf("%+v", aadarsh) //prints the field name with its value
 
-	aadarsh := person{firstname: "aadarsh", lastname: "shah", contact: contact{email: "aadarshkumar131@gmail.com", currectPlace: "Bagdogra"}}
+	//aadarsh := person{firstname: "aadarsh", lastname: "shah", contact: contact{email: "aadarshkumar131@gmail.com", currectPlace: "Bagdogra"}}
 	//aadarsh.print()
 	aadarsh.updateFirstName("atul")
 	//aadarsh.print()
