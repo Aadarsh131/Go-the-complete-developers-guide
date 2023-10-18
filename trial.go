@@ -2,13 +2,15 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 )
 
-func variadicFunc(param ...interface{}) {
-	fmt.Println(reflect.TypeOf(param[0]))
-}
+type stringSliceType []string
 
 func main() {
-	variadicFunc(45)
+	a := stringSliceType{}
+	a.someFunc(stringSliceType{"a", "b"})
+}
+
+func (stringSliceType) someFunc(strings []string) {
+	fmt.Println(len(strings))
 }
