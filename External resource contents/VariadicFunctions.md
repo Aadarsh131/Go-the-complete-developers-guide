@@ -156,6 +156,6 @@ In loosing that, and I think this is an important one, the defaulting and valida
 
 - But regarless, if you need to do something like function overloading and method overloading in Golang, you can do it like this.
 
-> Refer [06. Interfaces](/06.%20Interfaces/Interface) of this section to know more about interface{} type and how type assertions work
+> Refer [06. Interfaces](../06.%20Interfaces/Interface) of this section to know more about interface{} type and how type assertions work
  
 > **Resourse-** https://changelog.ca/log/2015/01/30/golang
