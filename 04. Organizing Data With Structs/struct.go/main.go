@@ -50,7 +50,7 @@ func (p person) print() {
 }
 
 func (s SLICE) updateMe(value string) {
-	s[0] = value
+	s[0] = value //ref type, hence the original slice will be updated
 
 	// NOTE: type []string(slice) is of reference type
 

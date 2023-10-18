@@ -1,5 +1,5 @@
 ### Why does Go not support overloading of methods and operators?
-
+#### Official statement-
 >Method dispatch is simplified if it doesn't need to do type matching as well. Experience with other languages told us that having a variety of methods with the same name but different signatures was occasionally useful but that it could also be confusing and fragile in practice. Matching only by name and requiring consistency in the types was a major simplifying decision in Go's type system.
 
 ## 2 tricks/ways to tackle the problem
