@@ -39,10 +39,10 @@ func main() {
 }
 
 func (p *person) updateFirstName(newFirstName string) { //using pointer as a reciever, meaning the value will be pass by ref
+	//NOTE: (p person) would make it pass by value(copy would be made)
 
-	//we can use this function on a type person also, rather than *person always (this is a shorthand)
 	fmt.Println(&p)
-	(*p).firstname = newFirstName
+	(*p).firstname = newFirstName //we can use p.firstname istead of (*p).firstname
 }
 
 func (p person) print() {
