@@ -50,6 +50,7 @@ func main() {
 	fmt.Println("-----------------------------------------------------------")
 	b.shuffle()
 	readFile("deal2.txt").print()
+
 }
 
 //func newCard() string {

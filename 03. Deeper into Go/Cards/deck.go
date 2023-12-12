@@ -12,7 +12,9 @@ import (
 type deck []string // in oo programming terms, 'deck' here is a class that borrows its functionalities from the []string(a slice of strings)
 
 func newDeck() deck { //a function without a reciever can be seen as a function that doesn't attach to any instance, its a normal function
-	cards := deck{}
+	// cards := deck{}
+	//OR
+	var cards []string
 	cardsuits := []string{"spades", "diamonds", "hearts", "clubs"}
 	cardnum := []string{"Ace", "two", "three", "four"}
 
@@ -22,7 +24,9 @@ func newDeck() deck { //a function without a reciever can be seen as a function 
 			//fmt.Println(cards)
 		}
 	}
-	return cards
+	return cards //here cards of type []string is implicitly being type casted to type deck
+	//OR
+	// return deck(cards)
 }
 
 // in Go, it is called a reciever (a convention to use a single character that matches the type name, eg 'd' in our case)
